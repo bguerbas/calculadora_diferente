@@ -1,6 +1,5 @@
 from pytest import raises
 
-from src.drivers.numpy_handler import NumpyHandler
 from .calculator_3 import Calculator3
 from ..drivers.interfaces.driver_handler_interface import DriverHandlerInterface
 
@@ -17,6 +16,9 @@ class MockDriverHandlerError(DriverHandlerInterface):
     def variance(self, numbers: list[float]) -> float:
         return 3
 
+    def mean(self, numbers: list[float]) -> float:
+        pass
+
 
 class MockDriverHandler(DriverHandlerInterface):
     def standard_derivation(self, numbers: list[float]) -> float:
@@ -24,6 +26,9 @@ class MockDriverHandler(DriverHandlerInterface):
 
     def variance(self, numbers: list[float]) -> float:
         return 1568.16
+
+    def mean(self, numbers: list[float]) -> float:
+        pass
 
 
 def test_calculate_with_variance_error():
