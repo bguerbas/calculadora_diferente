@@ -1,0 +1,7 @@
+No vscode, na pasta .vscode, crie um arquivo chamado settings.json e adicione o seguinte conteúdo:
+
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+    },
+}
